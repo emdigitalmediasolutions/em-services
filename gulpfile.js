@@ -25,7 +25,7 @@ function cleanTest(cb) {
 }
 
 function deployTest() {
-    return src([path.join('**/*.*'), '!' + path.join('node_modules/**/*.*'), '!' + path.join('dist/**/*,*')])
+    return src([path.join('**/*.*'), '!' + path.join('node_modules/**/*.*'), '!' + path.join('dist/**/*.*')])
     .pipe(dest(pluginPath));
 }
 
