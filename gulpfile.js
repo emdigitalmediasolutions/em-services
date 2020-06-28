@@ -38,7 +38,7 @@ function watchTest(cb) {
 function bundle() {
     return src([path.join('**/*.*'), '!' + path.join('node_modules/**/*.*'), '!' + path.join('out/**/*.*')])
     .pipe(zip('em-services-' + package.version + '.zip'))
-    .pipe(dest('out'));
+    .pipe(dest('dist'));
 }
 
 exports.cleanTest = cleanTest;
