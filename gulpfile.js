@@ -25,7 +25,7 @@ function cleanTest(cb) {
 }
 
 function deployTest() {
-    return src([path.join('**/*.*'), '!' + path.join('node_modules/**/*.*'), '!' + path.join('out/**/*,*')])
+    return src([path.join('**/*.*'), '!' + path.join('node_modules/**/*.*'), '!' + path.join('dist/**/*,*')])
     .pipe(dest(pluginPath));
 }
 
@@ -36,7 +36,7 @@ function watchTest(cb) {
 }
 
 function bundle() {
-    return src([path.join('**/*.*'), '!' + path.join('node_modules/**/*.*'), '!' + path.join('out/**/*.*')])
+    return src([path.join('**/*.*'), '!' + path.join('node_modules/**/*.*'), '!' + path.join('dist/**/*.*')])
     .pipe(zip('em-services-' + package.version + '.zip'))
     .pipe(dest('dist'));
 }
