@@ -5,8 +5,6 @@
 
 require('dotenv').config();
 
-const package = require('./package.json');
-
 const { series, src, dest, watch } = require('gulp');
 const del = require('del');
 const path = require('path');
@@ -37,7 +35,7 @@ function watchTest(cb) {
 
 function bundle() {
     return src([path.join('**/*.*'), '!' + path.join('node_modules/**/*.*'), '!' + path.join('dist/**/*.*')])
-    .pipe(zip('em-services-' + package.version + '.zip'))
+    .pipe(zip('em-services.zip'))
     .pipe(dest('dist'));
 }
 
