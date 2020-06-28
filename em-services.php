@@ -3,7 +3,7 @@
  * Plugin Name:     EM Services Display
  * Description:     A display for a services post type.
  * Version:         1.0.0
- * Author:          The WordPress Contributors
+ * Author:          James Plant
  * License:         GPL-2.0-or-later
  * License URI:     https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:     create-block
